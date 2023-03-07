@@ -1,0 +1,61 @@
+@media (max-width: 869px) {
+    .modal {
+        &__arrow {
+            right: -30px;
+            top: 325px;
+        }
+        &__feedback {
+            margin: 24px 54px 0 54px;
+        }
+    }
+}
+
+@media (max-width: 740px) {
+    .modal {
+        &__input {
+            width: 230px;
+        }
+        &__btn {
+            width: 250px;
+        }
+    }
+}
+
+@media (max-width: 669px) {
+    .modal {
+        &__second-descr {
+            font-size: 12px;
+        }
+        &__steps {
+            font-size: 9px;
+        }
+        &__arrow {
+            top: 345px;
+        }
+        &__feedback {
+            justify-content: center;
+            align-items: center;
+        }
+        &__input {
+            width: 150px;
+        }
+        &__btn {
+            width: 170px;
+            font-size: 13px;
+        }
+    }
+}
+
+@media (max-width: 551px) {
+    .modal {
+        &__container {
+            justify-content: center;
+            width: 100%; 
+            max-width: 600px;
+            max-height: 50vh;
+        }
+        &__left {
+            min-width: 110px;
+        }
+    }
+}

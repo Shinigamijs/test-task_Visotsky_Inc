@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Pop-up</title>
+</head>
+<body>
+    <button id="show-modal">Show</button>
+    <div class="modal" id="modal-window">
+        <div class="modal__container">
+            <div class="modal__left">
+                <img src="img/book.svg" alt="book img" class="modal__img">
+                <p class="modal__text-bg">ПОШ<br>АГО-<br>ВЫЙ<br> ПЛАН</p>
+                <img src="img/arrow.svg" alt="arrow icon" class="modal__arrow">
+            </div>
+            <div class="modal__content"> 
+                <h2 class="modal__subtitle">мастер-класс?</h2>
+                <h3 class="modal__descr">Скачайте пошаговый план</h3>
+                <h1 class="modal__title">«Как собственнику <br> выйти из операционки»</h1>
+                <p class="modal__second-descr">и познакомьтесь с этим инструментом <br> <span class="bold">прямо сейчас</span></p>
+                <h3 class="modal__steps">10 шагов помогут создать системный бизнес</h3>
+                <form action="#" class="modal__feedback">
+                    <div class="modal__input-descr">Для получения бонуса введите email</div>
+                    <input required placeholder="Ваш e-mail" name="email" type="email" class="modal__input">
+                    <button class="modal__btn">Скачать пошаговой план</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

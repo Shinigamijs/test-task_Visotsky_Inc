@@ -1,0 +1,211 @@
+// Сброс стандартных стилей
+@import "resets.scss";
+@import "normalizez.scss";
+
+// Шрифты
+
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url('../fonts/GothamPro.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url('../fonts/GothamPro-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham Pro';
+    src: url('../fonts/GothamPro-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Gotham Pro', sans-serif;
+}
+
+// Стили модального окна 
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    z-index: 1050;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, .5);
+
+    // Контейнер
+    &__container {
+        display: flex;
+        flex-direction: row;
+        max-width: 750px;
+        min-height: 449px;
+    }
+
+    // Левая часть модального окна с изображением
+    &__left {
+        position: relative;
+        min-width: 310px;
+        background: #EFEFEF;
+        border-radius: 20px 0 0 20px;
+    }
+    &__text-bg {
+        margin-top: 49px;
+        margin-left: 12px;
+        font-weight: 900;
+        font-size: 92px;
+        line-height: 88px;
+        text-align: right;
+        color: #000000;
+        mix-blend-mode: soft-light;
+    }
+    &__img {
+        position: absolute;
+        right: -42px;
+        top: 8px;
+        margin-top: 46px;
+        overflow: hidden;
+        z-index: 2;
+    }
+    &__arrow {
+        position: absolute;
+        right: -50px;
+        top: 335px;
+    }
+
+    // Основной контент модального окна который размещен справа
+    &__content {
+        text-align: center;
+        background: #FFFFFF;
+        border-radius: 0 20px 20px 0;
+    }
+    &__subtitle {
+        margin-top: 28px;
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 23px;
+        text-transform: uppercase;
+        color: #0D0D0D;
+    }
+    &__descr {
+        margin-top: 48px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 13px;
+        color: #0D0D0D;
+    }
+    &__title {
+        margin-bottom: 0;
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 22px;
+        text-transform: uppercase;
+        color: #0D0D0D;
+    }
+    &__second-descr {
+        margin-top: 8px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 13px;
+        color: #0D0D0D;
+    }
+    .bold {
+        font-weight: 700;
+    }
+    &__steps {
+        margin-top: 15px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 11px;
+        text-align: center;
+        color: #0D0D0D;
+    }
+
+    // Форма
+    &__feedback {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin: 34px 74px 0 74px;
+    }
+    &__input-descr {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 11px;
+        color: #000000;
+    }
+    &__input {
+        margin-top: 6px;
+        width: 302px;
+        height: 50px;
+        border: 2px solid #F3CE00;
+        border-radius: 4px;
+        font-weight: 900;
+        font-size: 14px;
+        line-height: 13px;
+        color: #0D0D0D;
+        padding-left: 15px;
+    }
+    &__input:hover {
+        border: 2px solid #fcb723;
+    }
+    &__btn {
+        margin-top: 15px;
+        width: 323px;
+        height: 50px;
+        background: linear-gradient(92.64deg, #FF5621 29.24%, #F21313 83.67%);
+        border-radius: 4px;
+        border: none;
+        font-weight: 900;
+        font-size: 16px;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+    &__btn:hover {
+        transition: all ease 0.3s;
+        background: linear-gradient(92.64deg, #fd450d 29.24%, #f00000 83.67%);
+        box-shadow: #FF5621 0px 1px 25px;
+    }
+}
+
+
+// Интерактив с открытием и закрытием модального окна
+#show-modal {
+    display: block;
+    width: 200px;
+    height: 80px;
+    margin: 200px auto;
+    background: linear-gradient(92.64deg, #FF5621 29.24%, #F21313 83.67%);
+    border-radius: 4px;
+    border: none;
+    font-weight: 900;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+#show-modal:hover {
+    transition: ease 0.3s;
+    background: linear-gradient(92.64deg, #fd450d 29.24%, #f00000 83.67%);
+    box-shadow: #FF5621 0px 1px 25px;
+}
+
+.open {
+    visibility: visible;
+}
+
+// Адаптация
+@import 'media';
